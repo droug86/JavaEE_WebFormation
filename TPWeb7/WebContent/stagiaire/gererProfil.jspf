@@ -1,0 +1,17 @@
+	<form class="connexion" action="<%=request.getContextPath()%>/stagiaire/modifPassword" method="post">
+		<div class="bloc_motdepasse">
+			<label for="motdepasse">Ancien mot de passe</label>
+			<input class="champtexte" type="text"  id="motdepasse" name="oldmotdepasse" />
+		</div>
+		<div class="bloc_motdepasse">
+			<label for="newmotdepasse">Nouveau mot de passe</label>
+			<input class="champtexte" type="text"  id="newmotdepasse" name="newmotdepasse" />
+		</div>
+		<div class="bloc_motdepasse">
+			<label for="confirmmotdepasse">Confirmation mot de passe</label>
+			<input class="champtexte" type="text"  id="confirmmotdepasse" name="confirmmotdepasse" />
+		</div>
+		<div class="bloc_connexion">
+			<input type="submit" id="valider" value="Valider" />
+		</div>
+		</form>

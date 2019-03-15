@@ -1,0 +1,31 @@
+<%@page import="org.apache.jasper.tagplugins.jstl.core.ForEach"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="fr.eni_ecole.jee.bean.*" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+
+<form class="connexion" action="${pageContext.request.contextPath}/stagiaire/formations" method="get">
+		<div class="bloc_connexion">
+			
+			<select name="nonInscrit" multiple="multiple" size="5">
+					<c:forEach var="f" items="${nonInscrit}" >
+						<option value="${f.id}">${f.libelle}</option>
+						
+					</c:forEach>
+			</select>
+		
+			<input type="submit" name="action" value="ajouter"/>
+			
+			<input type="submit" name="action" value="supprimer" />
+			
+			
+			<select name="inscrit" multiple="multiple" size="5">
+					<c:forEach var="f" items="${inscrit}">
+						<option value="${f.id}">${f.libelle}</option>
+					</c:forEach>
+			</select>
+			
+			
+			
+		</div>
+		</form>

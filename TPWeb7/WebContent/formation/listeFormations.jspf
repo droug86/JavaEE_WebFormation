@@ -1,0 +1,15 @@
+	<%@ page import ="fr.eni_ecole.jee.bean.*, java.util.*, java.text.*" %>
+	<div id="listeFormation">
+	<%
+  		DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+		ArrayList<Formation> listeFormations = (ArrayList<Formation>)request.getSession().getAttribute("listeFormations");
+	 	for(Formation f : listeFormations) {
+	%>
+					<div class="formation">
+					<h2><%=f.getLibelle() %></h2>
+					<p> Du <%= df.format(f.getDateDebut())%> au <%= df.format(f.getDateFin())%></p>
+					<p><%= f.getDescription() %></p>
+					</div>
+					<br />
+	<% } %>
+	</div>

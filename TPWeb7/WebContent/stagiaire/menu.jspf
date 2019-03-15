@@ -1,0 +1,6 @@
+	<div id="menu">
+		<a href="<%=request.getContextPath()%>/">Accueil</a><br/>
+		<a href="<%=request.getContextPath()%>/stagiaire/profil">Gérer mon profil</a><br/>
+		<a href="<%=request.getContextPath()%>/stagiaire/formations">Gérer mes formations</a><br/>
+		<a href="<%=request.getContextPath()%>/deconnexion">Deconnexion</a><br/>
+	</div>

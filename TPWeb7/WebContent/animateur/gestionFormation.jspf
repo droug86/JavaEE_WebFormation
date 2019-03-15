@@ -1,0 +1,26 @@
+	<%@ page  import ="fr.eni_ecole.jee.bean.*, java.util.*, java.text.*" %>
+	
+	<div id="listeFormation">
+	<form id="gestionFormations" action="<%=request.getContextPath()%>/animateur/gestionFormations" method="post">
+	<%
+  		DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+		ArrayList<Formation> listeFormations = (ArrayList<Formation>)request.getSession().getAttribute("listeFormations");
+		int index = 0;
+	 	for(Formation f : listeFormations) {
+	%>
+			<div class="formationEntete">
+			
+				<label class="formationLibelle"><%=f.getLibelle()%></label>
+				<label class="formationDate"><%=df.format(f.getDateDebut())%></label> -
+				<label class="formationDate"><%=df.format(f.getDateFin()) %></label>
+				<input type="submit" name="bSupprimer_<%=index%>"  value="Supprimer" />
+				<input type="submit" name="bModifier_<%=index%>"  value="Modifier" />
+			
+			</div>	
+	<%
+			index++;
+	 	}
+	%>
+	<input type="submit" name="bAjouter" value="Ajouter"/>
+	</form>
+	</div>

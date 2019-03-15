@@ -1,0 +1,12 @@
+	<div id="menu">
+		<a href="<%=request.getContextPath()%>/">Accueil</a><br />
+		<a href="<%=request.getContextPath()%>/formation/liste">Liste des formations</a><br />
+		<a href="<%=request.getContextPath()%>/animateur">Accès animateur</a><br />
+		<a href="<%=request.getContextPath()%>/stagiaire">Accès stagiaire</a><br />
+		<br />
+		<form method="get" action="http://www.google.fr/search">
+			<input type="hidden" name="hl" value="fr" />
+			<input class="champtexte" type="text" name="q" />
+			<input type="submit" value="Rechercher" />
+		</form>
+	</div>
